@@ -1,0 +1,167 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+	* Variables
+	* Strings
+	* Funciones (argumentos, `return`)
+	* Declaraciones `if`
+	* Valores booleanos (`true`, `false`)
+
+Respuestas:
+
+Variables:
+    * Las variables son una característica de cualquier lenguaje de programación.
+    Es donde se guardan los datos que utiliza un lenguaje de programación.
+    
+    En Javascript las variables se crean con las palabras reservadas del lenguaje: var, const, let;
+    (Nota: No podremos usas estas palabras claves del lenguaje cómo nombres de variables.)
+
+    * Variables con var  *
+    
+    Inicializar una variable con un valor:
+
+    var producto = "Monitor de 24 pulgadas";
+
+    Las variables se pueden reasignar
+    
+    producto = "Monitor de 19 pulgadas";
+   
+    JavaScript es un lenguaje de tipo dinámico, no se específica tipo de dato.
+
+    producto = 20;
+
+    Se pueden inicializar sin valor y asignarlo después
+    var disponible;
+    
+    disponible = true;
+
+    disponible = false;
+
+    Una variable puede contener letras, _ o números. Pero no pueden iniciar con un número
+
+    var 99dias; esta mal
+    var dias99; este es correcto
+
+    var 01_; esta mal
+    var _01; es correcto
+
+   * Variables con const  * 
+
+    const producto = "Tablet";
+
+    No se pueden reasignar
+    producto = "Monitor";
+
+    Debe inicializar con un valor
+    const precio = 20;
+
+* Variables con let  *
+
+let producto = "Tablet";
+
+Se puede reasignar el valor
+
+producto = "Monitor";
+
+producto = 20;
+producto = true;
+producto = false;
+
+Strings ( o cadenas de texto):
+    * Los strings o cadenas de texto representan un texto que se puede asignar a una variable. Siempre se definen entre comillas, pueden ser simples o dobles.
+    Ejemplo: 
+
+let producto = "Tablet";
+
+Funciones:
+
+    * Las funciones son una serie de procedimientos o instrucciones, es decir, líneas de código, van a realizar una acción. Una de las ventajas es que permiten tener un código más ordenado y por lo tanto más fácil de mantener, otro de las ventajas es que son reutilzables.
+
+    Entre (), se ponen los parámetros de la función. Entre {} se le conoce como el cuerpo de la función 
+
+    3 formas de crear funciones: 
+
+    Declaración de Función ( Function Declaration )
+    
+    Definir la función
+    function sumar() {
+    console.log(2 + 2);
+    }
+
+    Mandar a llamar la función
+    sumar();
+
+    Expresión de Función (Function Expression)
+    const sumar2 = function () {
+    console.log(3 + 3);
+    };
+
+    sumar2();
+
+    Función Fecha o (Arrow Function)
+    const sumar2 = () => {
+    console.log(3 + 3);
+    };
+
+    Las funciones pueden recibir argumentos, estos van dentro de los (), ejemplo:
+
+    function sumarDosNumeros(a, b) {
+    var suma = a + b;
+    return suma;
+    }
+
+    sumarDosNumeros(1, 5); // 6
+    
+    Al llamar la función recibe como primer argumento el número 1 y como segundo argumento el número 5. Esos valores va a ocupar los lugares de a y b respectivamente para realizar la operación de suma.
+
+    La declaración return nos devuelve el valor de la variable suma, en el ejemplo sería, el número 6. 
+        
+    * Declaraciones `if`:
+   
+    Las estructuras de control van a revisar por una condición, o multiples condiciones, si ese código se cumple, se ejecuta ese bloque de código y se puede agregar otra acción (un else) en caso de que no se cumpla. El else es opcional.
+
+    Ejemplo:
+
+    const puntaje = 1001;
+
+    if (puntaje == 1000) {
+    console.log("Si es igual...");
+    } else {
+    console.log("No es igual...");
+    }
+
+    const puntaje = 1000; // un signo de = es asignación.
+    const puntaje2 = "1000";
+
+
+    if (puntaje != 1000) { 
+    // != diferente == igual a
+    console.log("Si es diferente...");
+    }
+
+    if (puntaje !== "1000") {
+    // !== diferente a, revisa el valor y tipo de dato.
+    console.log("Si es diferente...");
+    } else {
+    console.log("No es diferente");
+    }
+
+    // == Operador que no es estricto
+    // === Operador estricto
+
+    Operador Mayor que y menor que
+
+    const dinero = 300;
+    const totalAPagar = 300;
+
+    if (dinero >= totalAPagar) {
+    console.log("Si podemos pagar");
+    } else {
+    console.log("Fondos insuficientes");
+    }
+
+    * Valores booleanos (`true`, `false`)
+    En Javascript usamos booleanos para significar verdadero o falso.
+
+    var meEncantaJavascript = true;
+
+    Los valores posibles de un dato booleando en JS son: true o false.
